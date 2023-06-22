@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flipbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/bookblock.custom.css" />
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container-fluid px-0">
+        <div class="row no-gutters">
+            <div class="col-12 mx-auto my-auto" id="flipbook-wrapper">
+                <div class="row no-gutters">
+
+                    <div class="col-8 offset-2 my-auto" id="flipbook">
+                        <div id="bb-bookblock" class="bb-bookblock">
+
+                            <div class="bb-item">
+                                <figure class="book-cover" id="book-cover-front">
+                                    <img class="mx-auto d-block" src="images/book_cover.jpg" alt="back_cover"/>
+                                </figure>
+                            </div>
+
+                            <div class="bb-item">
+                                <figure class="book-cover" id="book-cover-back">
+                                    <img src="images/book_cover.jpg" alt="back_cover"/>
+                                </figure>
+                            </div>
+                        </div><!-- bb-bookblock -->
+
+                        <div id="nav-wrapper" class="mx-auto">
+                            <nav>
+                                <img id="bb-nav-first" src="images/first.svg" alt="first" />
+                                <img id="bb-nav-prev" src="images/prev.svg" alt="prev" />
+                                <div id="page-counter">
+                                    <input id="current-page" type="text" value="0">
+                                    <button type="button" id="total-count" disabled>_</button>
+                                </div>
+                                <img id="bb-nav-next" src="images/next.svg" alt="next" />
+                                <img id="bb-nav-last" src="images/last.svg" alt="last" />
+                            </nav>
+                            
+                        </div><!-- nav-wrapper -->
+                    </div><!-- flipbook -->
+
+                    <address class="col-1">
+                        <a href="#" target="_blank">
+                            <img src="images/github.svg" alt="github">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="images/linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="images/info.svg" alt="personal-website">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="images/mailto.svg" alt="mail">
+                        </a>
+                    </address>
+
+                </div><!-- row -->
+            </div><!-- flipbook-wrapper -->
+        </div><!-- row -->
+    </main><!-- container-fluid -->
+
+    <script src="js/modernizr.custom.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.custom.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+
+<div class="controls">
+    <div class="control active-btn" data-id="home" >
+        <a href="../index.html">
+        <i class="fas fa-home"></i></a>
+    </div>
+    <div class="control" data-id="about">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="control" data-id="portfolio">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <div class="control" data-id="blogs">
+        <i class="far fa-newspaper"></i>
+    </div>
+    <div class="control" data-id="contact">
+        <i class="fas fa-envelope-open"></i>
+    </div>
+</div>
+<div class="theme-btn">
+    <i class="fas fa-adjust"></i>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
