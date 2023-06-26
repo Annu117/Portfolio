@@ -176,6 +176,19 @@ var Page = (function () {
                 }
             });
 
+            // Flipbook flip on click at left and right of the page
+            $slides.on('click', function (e) {
+                var $target = $(e.target);
+                var width = $(window).width();
+                var clickX = e.clientX;
+
+                if (clickX < width / 3 && !$target.hasClass('bb-nav-prev')) {
+                    navigate('prev');
+                } else if (clickX > (width / 3) * 2 && !$target.hasClass('bb-nav-next')) {
+                    navigate('next');
+                }
+            });
+            // end
             config.$currentPage.keydown(function (e) {
                 // if the pressed key is "Enter"
                 if (e.keyCode === 13) {
@@ -186,6 +199,16 @@ var Page = (function () {
                     }
                 }
             });
+
+            $slides.on({
+                mouseenter: function() {
+                    $(this).addClass('hover');
+                },
+                mouseleave: function() {
+                    $(this).removeClass('hover');
+                }
+            });
+            
         };
 
     return {

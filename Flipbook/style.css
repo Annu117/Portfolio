@@ -1,0 +1,35 @@
+/* .bb-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.bb-item::before,
+.bb-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.bb-item::before {
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #f0f0f0 transparent;
+    left: -50px;
+}
+
+.bb-item::after {
+    border-style: solid;
+    border-width: 0 100px 100px 0;
+    border-color: transparent #f0f0f0 transparent transparent;
+    right: -50px;
+}
+
+.bb-item:hover::before,
+.bb-item:hover::after {
+    opacity: 1;
+} */
