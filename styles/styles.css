@@ -439,7 +439,7 @@ section {
   transition: all 0.4s ease-in-out;
 }
 .portfolios .portfolio-item .hover-items h3 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--color-white);
   margin-bottom: 0.5rem;
   margin-top: 1.2rem;
@@ -484,7 +484,7 @@ section {
 .portfolios .portfolio-item .hover-items .cont .text{
   font-size: 12px;
   line-height: 1.5;
-  margin: 20px;
+  margin: 15px;
 }
 .blogs {
   display: grid;
