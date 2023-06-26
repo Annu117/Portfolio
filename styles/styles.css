@@ -476,7 +476,14 @@ section {
   opacity: 1;
   transform: scale(1);
 }
-
+.portfolios .portfolio-item .hover-items .cont {
+  text-align: center;
+}
+.portfolios .portfolio-item .hover-items .cont .text{
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 20px;
+}
 .blogs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
