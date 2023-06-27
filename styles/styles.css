@@ -30,7 +30,7 @@
   --color-primary: #FFFFFF;
   --color-secondary: #F56692;
   --color-white: #454e56;
-  --color-black: #000;
+  --color-black: #383838;
   --color-grey0: #f8f8f8;
   --color-grey-1: #6c7983;
   --color-grey-2: #6c7983;
@@ -209,31 +209,27 @@ section {
   margin: 1.5rem 0;
   line-height: 2rem;
 }
-
+h1{
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
 .header-content .right-header h1{
-  /* top:100px;
-  text-align: center;
-  align-content: center;
-  font-size: 3vw; 
-  z-index: 10;
-  color:#63C7B2;
-  color: #272932ff; */
+  
   font-style: normal;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  /* font-size: 5.33em; */
-  /* line-height: 7.46%; */
-  /* text-align: center; */
+ 
 }
 .header-content .right-header p{
   font-family: "Poppins", sans-serif;
+  
 }
 .typing{
   /*   position:relative; */
   position: relative;
   /* transform: translate(10%,30vh);   */
   }
-  h4::after{
+  h5::after{
     content:"";
      position:relatve; 
     width:1px;
@@ -277,6 +273,7 @@ section {
   box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }
 .about-container .right-about .about-item .abt-text {
+  font-family: "Poppins", sans-serif;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -521,6 +518,7 @@ section {
 .portfolio-item:hover .hover-items {
   opacity: 0.9;
   transform: scale(1);
+  font-family: "Poppins", sans-serif;
 }
 .portfolios .portfolio-item .hover-items .cont {
   text-align: center;
@@ -572,6 +570,7 @@ section {
   margin-bottom: 0.7rem;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 .blogs .blog .blog-text h4:hover {
   color: var(--color-secondary);
@@ -580,6 +579,7 @@ section {
   color: var(--color-grey-2);
   line-height: 2rem;
   padding-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-content-con {
@@ -593,17 +593,22 @@ section {
   margin-top: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
 }
 .contact-content-con .left-contact p {
   margin: 1rem 0;
   line-height: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 .contact-content-con .left-contact .contact-info .contact-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
+  font-family: "Poppins", sans-serif;
   margin: 0.3rem 0 !important;
   padding: 0 !important;
 }
@@ -648,6 +653,7 @@ section {
 .contact-content-con .right-contact {
   flex: 3;
   margin-left: 3rem;
+  font-family: "Poppins", sans-serif;
 }
 .contact-content-con .right-contact .input-control {
   margin: 1.5rem 0;
@@ -668,14 +674,17 @@ section {
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
 }
-.contact-content-con .right-contact .i-c-2 :last-child {
+.contact-content-con .right-contact .i-c-2:last-child {
   margin-left: 1.5rem;
 }
 .contact-content-con .right-contact .submit-btn {
   display: flex;
   justify-content: flex-start;
+  /* background-color: var(--color-primary); */
 }
-
+.contact-content-con .right-contact .submit-btn .main-btn{
+  background-color: var(--color-primary);
+}
 /*Independed components*/
 .btn-con {
   display: flex;
@@ -684,6 +693,7 @@ section {
   height: 1vh;
   align-items: center;
   justify-content: center;
+  /* background-color: var(--color-primary); */
 }
 
 .main-btn {
@@ -699,6 +709,9 @@ section {
 }
 .main-btn .btn-text {
   padding: 0 2rem;
+  /* color: var(--color-secondary); */
+  /* transition: color 0.4s ease-out; */
+  
 }
 .main-btn .btn-icon {
   background-color: var(--color-secondary);
@@ -713,21 +726,27 @@ section {
   position: absolute;
   top: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
   transform: translateX(100%);
   transition: all 0.4s ease-out;
-  z-index: -1;
+  /* z-index: -1; */
+  /* background-color: var(--color-secondary); */
+  opacity: 0.5 ;
+}
+
+.main-btn:hover::before {
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: var(--color-primary); */
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+  opacity: 0.5;
+  /* transition: all 0.4s ease-out; */
 }
 .main-btn:hover {
   transition: all 0.4s ease-out;
 }
-.main-btn:hover::before {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transform: translateX(0);
-  transition: all 0.4s ease-out;
-}
-
 /*# Liquid button */
 .btn-liquid {
   display: inline-block;
@@ -767,13 +786,18 @@ section {
   text-align: center;
 }
 .main-title h2 {
+  
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 .main-title h2 span {
   color: var(--color-secondary);
+}
+.about-container .left-about h4{
+  font-family: "Poppins", sans-serif;
 }
 .main-title h2 .bg-text {
   position: absolute;
@@ -785,10 +809,12 @@ section {
   transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .about-container .left-about p {
   padding-left: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 @media screen and (max-width: 600px) {
