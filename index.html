@@ -7,6 +7,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
     
     <link rel="stylesheet" href="path/to/your/styles.css">
     <script src="path/to/your/scripts.js"></script>
@@ -30,16 +32,14 @@
             <div class="right-header">
                 <h1 class="name">
                     Hi, I'm <span>Annu Kumari.</span>
-                    A Web Developer.
+                    
+                    <div class="type">       
+                        <h4 class="typing">Developer</h4>
+                    </div>
+                    <!-- A Web Developer. -->
                 </h1>
-                <!-- I'm a Web Developer, I love to create beautiful and functional websites. -->
-                <p>I'm new to web development and my goal is to create visually appealing and highly functional websites.
-                    <!-- I'm a Web Developer, I love to create beautiful and functional websites. -->
-                    <!-- Second year Computer Science and Design Undergraduate at IIITD. 
-                            I'm interested in design and enjoy learning more about it. 
-                            While I'm not an expert, I'm always looking to improve my skills and knowledge in this area. 
-                            I believe that design can make technology more user-friendly and accessible, and I enjoy exploring how the two fields intersect. -->
-                </p>
+                
+                <p>I'm new to web development and my goal is to create visually appealing and functional websites.</p>
                 <!-- <div class="btn-con">
                     <a href="" class="main-btn">
                         <span class="btn-text">Download CV</span>
@@ -50,12 +50,12 @@
 
                     <!-- <div class="btn-liquid">
                         <a href="#" class="inner">Journal</a> -->
-                <div class="btn1-con">
+                <!-- <div class="btn1-con">
                     <a href="#" class="btn-liquid">
                     <span class="inner">Journal</span>
                     </a>
                     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script><script  src="styles/script.js"></script>
-                </div>
+                </div> -->
                 <!-- <script src="styles/script.js"></script> -->
                 
             </div>
@@ -84,7 +84,12 @@
                         </a>
                     </div>
                 </div>
-               
+                <div class="right-about">
+                    <div class="right-container">
+
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="container" id="portfolio">
             <div class="main-title">
@@ -289,9 +294,19 @@
             <i class="fas fa-envelope-open"></i>
         </div>
     </div>
-    <div class="theme-btn">
+    <div class="theme-btn"  onclick="changeThemeColor()">
         <i class="fas fa-adjust"></i>
     </div>
     <script src="app.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script><script type="module" src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
+  <script type="module" src="./script1.js"></script>
+  <script>
+    const centerLink = document.getElementById('centerLink');
+    centerLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.open(centerLink.href);
+    });
+  </script>
 </body>
 </html>
