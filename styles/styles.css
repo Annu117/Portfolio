@@ -210,6 +210,48 @@ section {
   line-height: 2rem;
 }
 
+.header-content .right-header h1{
+  /* top:100px;
+  text-align: center;
+  align-content: center;
+  font-size: 3vw; 
+  z-index: 10;
+  color:#63C7B2;
+  color: #272932ff; */
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  /* font-size: 5.33em; */
+  /* line-height: 7.46%; */
+  /* text-align: center; */
+}
+.header-content .right-header p{
+  font-family: "Poppins", sans-serif;
+}
+.typing{
+  /*   position:relative; */
+  position: relative;
+  /* transform: translate(10%,30vh);   */
+  }
+  h4::after{
+    content:"";
+     position:relatve; 
+    width:1px;
+    height:50px;
+     border-right:4px solid #272932ff;
+     animation-delay: 10s;
+    animation:blink 0.5s infinite ease; 
+  }
+  
+  @keyframes blink{
+    0%{
+      opacity:0;
+    }
+    100%{
+      opacity:1;
+    }
+  }
+
 /*About*/
 .about-container {
   display: grid;
@@ -441,8 +483,10 @@ section {
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 2.2rem;
   color: var(--color-white);
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem;
   margin-top: 1.2rem;
+  margin-left: 4rem; */
+  text-align: center;
 }
 .portfolios .portfolio-item .hover-items .icons {
   display: flex;
