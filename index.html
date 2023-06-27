@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles2.css">
     
-    
+    <link rel="stylesheet" href="path/to/your/styles.css">
+    <script src="path/to/your/scripts.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,8 +33,8 @@
                     A Web Developer.
                 </h1>
                 <!-- I'm a Web Developer, I love to create beautiful and functional websites. -->
-                <p>
-                    I'm a Web Developer, I love to create beautiful and functional websites.
+                <p>I'm new to web development and my goal is to create visually appealing and highly functional websites.
+                    <!-- I'm a Web Developer, I love to create beautiful and functional websites. -->
                     <!-- Second year Computer Science and Design Undergraduate at IIITD. 
                             I'm interested in design and enjoy learning more about it. 
                             While I'm not an expert, I'm always looking to improve my skills and knowledge in this area. 
@@ -63,6 +64,7 @@
     </header>
     <main>
         <section class="container about" id="about">
+            <!-- <i class="fas fa-user"></i> -->
             <div class="main-title">
                 <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
             </div>
@@ -91,19 +93,19 @@
             <p class="port-text">
                 <!-- Here is some of my work that I've done in various programming languages. -->
             </p>
-           <div class="portfolios">
+            <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
                         <img src="img/womensafety.jpg" alt="">
                     </div>
                     <div class="hover-items"><a href="Flipbook/flipbook.html" >
-                        <h3>Women Safety</h3></a>
+                        <h3>Women Safety</h3>
                         <div class="cont">
                             <p class="text">
                                 Women’s safety is a hot topic in India, as it should be, considering the number of crimes against women daily. Even after being a popular topic, the effectiveness of solutions is much close to zero.
                                 Here, we tried to consider all the challenges working women face. And based on that, we Developed an application for their safety to help them while travelling. 
                                 </p>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
                 
@@ -112,12 +114,12 @@
                         <img src="img/TankStar.png" alt="">
                     </div>
                     <div class="hover-items"><a href="https://github.com/Parisha-Agrawal/AP-TankStar">
-                        <h3>Tank Star</h3></a>
+                        <h3>Tank Star</h3>
                         <div class="cont">
                             <p class="text">
                                 This project is similar to a popular game, Tank Stars. Build using LibGDX framework utilising the concepts of Object Oriented Programming and event-driven programming. It has features like resume games, save games, animative tank shoot etc. Worked in a team of two people. 
                             </p>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
             </div>
@@ -149,16 +151,17 @@
                 </div>
                 <div class="blogs">
                     <div class="blog">
-                        <img src="img/port6.jpg" alt="">
+                        <a href="https://annu117.github.io/Photography/">
+                        <img src="img/photography2.jpg" alt="">
                         <div class="blog-text">
                             <h4>
                                 Photography
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                                Html Css JavaScript based blog.
                             </p>
                         </div>
+                        </a>
                     </div>
                   
         </section>
@@ -199,7 +202,7 @@
                                     <span>Education</span>
                                 </div>
                                 <p>
-                                    <span>: Sussex University, East Sussex</span>
+                                    <span>: 787</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -217,7 +220,7 @@
                                     <span>Languages</span>
                                 </div>
                                 <p>
-                                    <span>: Afrikaans, English, Spanish</span>
+                                    <span>: English</span>
                                     
                                 </p>
                             </div> -->
@@ -243,7 +246,10 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        
+                        <form action="" class="contact-form" id="contactForm">
+                        <!-- <form action="send_email.php" method="POST" class="contact-form"> -->
+                            
                             <div class="input-control i-c-2">
                                 <input type="text" required placeholder="YOUR NAME">
                                 <input type="email" required placeholder="YOUR EMAIL">
