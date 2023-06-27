@@ -29,6 +29,6 @@ function type(){
         count++;    //change pointer to the next element in text array
         index=0;    //reset index to first letter of the next word
     }
-    setTimeout(type,400); //calls after 400ms/
+    setTimeout(type,200); //calls after 400ms/
 }
 type();
