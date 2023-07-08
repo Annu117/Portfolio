@@ -1,0 +1,169 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+<title>DPP Journal</title>
+<link rel="stylesheet" href="../double-page/css/double-page.css"/>
+<!-- <link rel="stylesheet" href="../../../styles/styles.css" /> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<main>
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div class="page" style="background-image:url(pages/1.jpg)"></div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- <div class="sidebar left">
+    Previous
+</div> -->
+
+<!-- <div class="sidebar right">
+    Next
+</div> -->
+
+<div class="link-to-page-1">
+    Home
+</div>
+
+<div class="magazine-viewport">
+	<div class="container">
+		<div class="magazine">
+			<!-- Next button -->
+			<div ignore="1" class="next-button"></div>
+			<!-- Previous button -->
+			<div ignore="1" class="previous-button"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var flipbook = document.querySelector('.flipbook');
+	for (var i = 2; i <= 42; i++) {
+		var page = document.createElement('div');
+		page.className = 'double';
+		page.style.backgroundImage = 'url(pages/' + i + '.jpg)';
+		flipbook.appendChild(page);
+	}
+
+function loadApp() {
+
+	var flipbook = $('.flipbook');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+
+	$('.flipbook .double').scissor();
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+
+	// Add event listeners for sidebar buttons
+	$('.sidebar.left').click(function() {
+		$('.flipbook').turn('previous');
+	});
+
+	$('.sidebar.right').click(function() {
+		$('.flipbook').turn('next');
+	});
+	
+	// Add event listener for clicking the link to page 1
+    $('.link-to-page-1').click(function() {
+        $('.flipbook').turn('page', 1);
+    });
+	// Add event listeners for page turning by clicking on the sides of the page
+    $('.flipbook').on('click', '.double', function(event) {
+        var book = $(this).parent();
+        var bookWidth = book.width();
+        var clickX = event.pageX - book.offset().left;
+
+        if (clickX < bookWidth / 2) {
+            book.turn('previous');
+        } else {
+            book.turn('next');
+        }
+    });
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['../../lib/turn.min.js'],
+	nope: ['../../lib/turn.html4.min.js'],
+	both: ['../../lib/scissor.min.js', 'css/double-page.css'],
+	complete: loadApp
+});
+
+</script>
+</main>
+<div class="controls">
+    <div class="control active-btn" data-id="home" >
+        <a href="../../../index.html">
+        <i class="fas fa-home"></i></a>
+    </div>
+    <div class="control" data-id="about">
+        <a href="../../../index.html#about">
+        <i class="fas fa-user"></i></a>
+    </div>
+    <div class="control" data-id="portfolio">
+        <a href="../../../index.html#portfolio">
+        <i class="fas fa-briefcase"></i></a>
+    </div>
+    <div class="control" data-id="blogs">
+        <a href="../../../index.html#blogs">
+        <i class="far fa-newspaper"></i></a>
+    </div>
+    <div class="control" data-id="contact">
+        <a href="../../../index.html#contact">
+        <i class="fas fa-envelope-open"></i></a>
+    </div>
+</div>
+<div class="theme-btn">
+    <i class="fas fa-adjust"></i>
+</div>
+<script>
+    const centerLink = document.getElementById('centerLink');
+    centerLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.open(centerLink.href);
+    });
+  </script>
+<script src="../../../app.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script><script type="module" src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
+  <script type="module" src="../../../script1.js"></script>
+</body>
+</html>
