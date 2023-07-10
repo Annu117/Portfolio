@@ -251,11 +251,11 @@ h1{
 /*About*/
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
-.about-container .right-about {
+/* .about-container .right-about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
@@ -299,13 +299,17 @@ h1{
   width: 2rem;
   height: 2px;
   background-color: var(--color-grey-5);
-}
+} */
 .about-container .left-about {
-  padding-right: 5rem;
+  padding-right: 2rem;
+  /* padding-right: calc(100vw - 2rem); */
 }
 .about-container .left-about p {
   line-height: 2rem;
-  padding: 1rem;
+  /* padding: 1rem; */
+  margin-right: 0%;
+  padding: 0;
+  
   color: var(--color-grey-1);
 }
 .about-container .left-about h4 {
@@ -870,10 +874,10 @@ h1{
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .about-container .right-about {
+  /* .about-container .right-about {
     grid-template-columns: repeat(1, 1fr);
     padding-top: 2.5rem;
-  }
+  } */
   .about-container .left-about {
     padding-right: 0;
   }
@@ -1008,9 +1012,9 @@ h1{
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .about-container .right-about {
+  /* .about-container .right-about {
     padding-top: 2.5rem;
-  }
+  } */
 
   .main-title h2 {
     font-size: 4rem;
@@ -1065,9 +1069,9 @@ h1{
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .about-container .right-about {
+  /* .about-container .right-about {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 
   .timeline {
     grid-template-columns: repeat(1, 1fr);
